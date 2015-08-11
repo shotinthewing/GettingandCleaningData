@@ -91,13 +91,13 @@ __Activity__:
 data from from the `train` and `test` folder are merged. We read the data contained in `train/X_train.txt` and `test/X_train.txt` and use the function __rbind()__ to put them together. We do the same for the `y` and `subject` data sets. In the end we __cbind()__ the `X`, `y` and `subject` merged data sets to get the `fulldata` data frame.
 
 ##Step2:
-we use the __grep()__ function to extract from the file containing the list of activities, `features.txt` the features we are interested in and filter the data containing measurements of means and standard deviations, that we put in a data frame called `mean_std`.
+we use the __grep()__ function to extract from the file containing the list of activities, `features.txt`, the features we are interested in and filter the data containing measurements of means and standard deviations, that we put in a data frame called `mean_std`.
 
 ##Step3:
 we read the activity names from `activity_labels.txt` to substitute them to the corresponding numbers in the `y` data.
 
 ##Step4:
-we give the variable name `Subject` to the subject data frame. Then, we create the clean data frame containing appropriate variable names, `cleanset`.
+we give the variable name `Subject` to the subject data frame. Then, we create the clean data frame containing all the appropriate variable names, `cleanset`.
 
 ##Step5:
-We load the R library __reshape2__ since we need the functions __melt()__ and __dcast()__. We melt `cleanset` with identifiers `Subject` and `Activity` and the we average the other variables using __mean__ inside the __dcast()__ function. We call the final data frame ´finalset´ and we write it in the output `tidy.txt`.
+We load the R library __reshape2__ since we need the functions __melt()__ and __dcast()__. We melt `cleanset` with identifiers `Subject` and `Activity` and then we average the other variables using __mean__ inside the __dcast()__ function. We call the final data frame ´finalset´ and we write it in the output `tidy.txt`.
