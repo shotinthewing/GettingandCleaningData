@@ -2,10 +2,11 @@
 
 The file `run_analysis` performs the analysis of the [data] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
 required by the project assignment, consisting in the 5 steps listed in the `README.md` file. The analysis returns a data set
-called `tidy.txt` containing the average of the measured variable over two identifiers: _Subject_ and _Activity_.
+called `tidy.txt` containing the average of the measured variables over two identifiers: _Subject_ and _Activity_.
 
 #Variables:
-(complete list from the file `feature.txt`. Details about the measurements can be found in the file 'features_info.txt'. Both files are contained in the data folder)
+This is the list of the variables we are interested in, means and standard deviations, extracted from the  complete list of features `feature.txt`. 
+All the details about these quantities, what they are and their units, can be found in the file 'features_info.txt'. Both files are contained in the data folder.
 
 * _tBodyAcc-mean()-X_           
 * _tBodyAcc-mean()-Y_          
