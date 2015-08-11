@@ -1,4 +1,4 @@
-##Description
+#Description
 
 The file `run_analysis` performs the analysis of the [data] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
 required by the project assignment, consisting in the 5 steps listed in the `README.md` file. The analysis returns a data set
@@ -85,3 +85,8 @@ __Activity__:
 * _SITTING_
 * _STANDING_
 * _LAYING_
+
+#Manipulation of the data
+##Step1:
+data from from the `train` and `test` folder are merged. We read the data contained in ´train/X_train.txt´ and ´train/X_train.txt´ and use the function __rbind()__ to put them together. We do the same for the `y` and `subject` data sets.
+
