@@ -88,5 +88,5 @@ __Activity__:
 
 #Manipulation of the data
 ##Step1:
-data from from the `train` and `test` folder are merged. We read the data contained in ´train/X_train.txt´ and ´train/X_train.txt´ and use the function __rbind()__ to put them together. We do the same for the `y` and `subject` data sets.
+data from from the `train` and `test` folder are merged. We read the data contained in ´X_train.txt´ and ´X_train.txt´ and use the function __rbind()__ to put them together. We do the same for the `y` and `subject` data sets. In the end we _cbind()_ the ´X´, ´y´ and ´subject´ merged data sets to get the ´fulldata` data frame.
 
