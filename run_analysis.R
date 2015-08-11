@@ -45,8 +45,6 @@ y$Activity<-activities[y$Activity,2]
 #----------------------------------------------------------------------------------------------------------------------------------
 #4)Appropriately labels the data set with descriptive variable names
 #we give the appropriate variable name to the subject dataset
-
-#we create the final, clean data set binding the ones we manipulated, mean_std, subject and 
 names(subject)<-"Subject"
 #then we bind the three data sets we manipulated to obtain the final clean data set with all the correct variable names
 cleanset<-cbind(mean_std,y,subject)
@@ -56,7 +54,7 @@ cleanset<-cbind(mean_std,y,subject)
 library(reshape2)
 #we first need to melt the data set
 cleanset_melted<-melt(cleanset,id=c("Subject","Activity"))
-#then we cast the data frame we want, averaging on the other variables
+#then we cast the data frame we want, averaging the other variables
 finalset<-dcast(cleanset_melted,Subject+Activity~variable,mean)
 
 #finally we write on a text file the clean data base we obtained
